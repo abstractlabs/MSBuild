@@ -1,0 +1,63 @@
+Build started 3/7/2017 8:31:02 PM.
+Project "D:\Users\abstr_000\Documents\Visual Studio 2015\Projects\MSBuild\Hello.msbuild" on node 1 (default targets).
+Building with tools version "14.0".
+Target "Prepare" in project "D:\Users\abstr_000\Documents\Visual Studio 2015\Projects\MSBuild\Hello.msbuild" (entry point):
+Using "Message" task from assembly "Microsoft.Build.Tasks.Core, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Message"
+  Preparing to say hello
+Done executing task "Message".
+Done building target "Prepare" in project "Hello.msbuild".
+Target "Hello" in project "D:\Users\abstr_000\Documents\Visual Studio 2015\Projects\MSBuild\Hello.msbuild" (entry point):
+Task "Message"
+  Hello You configuration is Debug you are logged in as abstr_000
+Done executing task "Message".
+Done building target "Hello" in project "Hello.msbuild".
+Target "Classes" in project "D:\Users\abstr_000\Documents\Visual Studio 2015\Projects\MSBuild\Hello.msbuild" (target "Projects" depends on it):
+Task "Message"
+  Classes Beaker.Tests\FooTests.cs;Beaker.Tests\Properties\AssemblyInfo.cs;Beaker\Foo.cs;Beaker\Properties\AssemblyInfo.cs
+Done executing task "Message".
+Task "Message"
+  Class File Beaker.Tests\FooTests.cs FooTests
+Done executing task "Message".
+Task "Message"
+  Class File Beaker.Tests\Properties\AssemblyInfo.cs;Beaker\Properties\AssemblyInfo.cs AssemblyInfo
+Done executing task "Message".
+Task "Message"
+  Class File Beaker\Foo.cs Foo
+Done executing task "Message".
+Done building target "Classes" in project "Hello.msbuild".
+Target "Projects" in project "D:\Users\abstr_000\Documents\Visual Studio 2015\Projects\MSBuild\Hello.msbuild" (entry point):
+Building target "Projects" completely.
+No input files were specified.
+Task "Message"
+  I found the Beaker Console Application in Beaker\Beaker.csproj
+Done executing task "Message".
+Using "JsonPeek" task from assembly "D:\Users\abstr_000\Documents\Visual Studio 2015\Projects\MSBuild\Dependencies\Targets\JsonPeek.MSBuild.dll".
+Task "JsonPeek"
+  Started json peek for file D:\Users\abstr_000\Documents\Visual Studio 2015\Projects\MSBuild\Beaker\info.json
+Done executing task "JsonPeek".
+Task "Message"
+  Version is 
+Done executing task "Message".
+Done building target "Projects" in project "Hello.msbuild".
+Target "Projects" in project "D:\Users\abstr_000\Documents\Visual Studio 2015\Projects\MSBuild\Hello.msbuild" (entry point):
+Building target "Projects" completely.
+No input files were specified.
+Task "Message"
+  I found the Beaker Console Unit Tests in Beaker\Beaker.Tests.csproj
+Done executing task "Message".
+Task "JsonPeek"
+  Started json peek for file D:\Users\abstr_000\Documents\Visual Studio 2015\Projects\MSBuild\Beaker\info.json
+Done executing task "JsonPeek".
+Task "Message"
+  Version is 
+Done executing task "Message".
+Done building target "Projects" in project "Hello.msbuild".
+Done Building Project "D:\Users\abstr_000\Documents\Visual Studio 2015\Projects\MSBuild\Hello.msbuild" (default targets).
+
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.09
