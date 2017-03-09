@@ -20,9 +20,11 @@
 		<AssemblyInfo CodeLanguage="CS" OutputFile="SolutionAssemblyInfo.cs" AssemblyVersion="$(Version)" AssemblyFileVersion="$(Version)" />
 	</Target>
 	<Target Name="Build" Outputs="%(Package.Identity)" DependsOnTargets="Clean;Version">
+    <Exec Command="Dependencies\NuGet\NuGet.exe restore %(Package.Identity) -SolutionDirectory ."/>
 		<MSBuild Projects="%(Package.Identity)" Properties="Configuration=$(Configuration);OutputPath=..\$(OutputPath)\Sources\%(Package.Name)" />
 	</Target>
 	<Target Name="Test" Outputs="%(Test.Identity)" DependsOnTargets="Build">
+    <Exec Command="Dependencies\NuGet\NuGet.exe restore %(Test.Identity) -SolutionDirectory ."/>
 		<MSBuild Projects="%(Test.Identity)" Properties="Configuration=$(Configuration);OutputPath=..\$(OutputPath)\Tests\%(Test.RelativeDir)" />
 		<Exec Command="Dependencies\XUnit\xunit.console.exe $(OutputPath)\Tests\%(Test.RelativeDir)%(Test.FileName).dll"/>
 	</Target>
