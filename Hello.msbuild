@@ -11,7 +11,7 @@
 		<Project Include="Beaker\Beaker.csproj">
 			<Name>Beaker Console Application</Name>
 		</Project>
-		<Project Include="Beaker\Beaker.Tests.csproj">
+		<Project Include="Beaker.Tests\Beaker.Tests.csproj">
 			<Name>Beaker Console Unit Tests</Name>
 		</Project>
 	</ItemGroup>
@@ -24,7 +24,7 @@
 	</Target>
 	<Target Name="Projects" Outputs="%(Project.Identity)" AfterTargets="Hello">
 		<Message Text="I found the %(Project.Name) in %(Project.Identity)"/>
-		<JsonPeek JsonInputPath="%(Project.RootDir)%(Directory)info.json" JPath="Version" Condition="Exists('%(Project.RootDir)%(Directory)info.json')" ContinueOnError="True">
+		<JsonPeek JsonInputPath="%(Project.RootDir)%(Project.Directory)info.json" JPath="Version" Condition="Exists('%(Project.RootDir)%(Project.Directory)info.json')" ContinueOnError="True">
 			<Output TaskParameter="Result" ItemName="Version"/>
 		</JsonPeek>
 		<Message Text="Version is %(Version.Value)" />
