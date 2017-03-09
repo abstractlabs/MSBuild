@@ -14,7 +14,7 @@
 		<Test Include="**\*.Tests.csproj"/>
 	</ItemGroup>
 	<Target Name="Clean">
-		<RemoveDir Directories="Packaging" ContinueOnError="WarnAndContinue"/>
+		<RemoveDir Directories="$(OutputPath)" ContinueOnError="WarnAndContinue"/>
 	</Target>
 	<Target Name="Version">
 		<AssemblyInfo CodeLanguage="CS" OutputFile="SolutionAssemblyInfo.cs" AssemblyVersion="$(Version)" AssemblyFileVersion="$(Version)" />

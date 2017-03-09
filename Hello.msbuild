@@ -24,13 +24,13 @@
 	</Target>
 	<Target Name="Projects" Outputs="%(Project.Identity)" AfterTargets="Hello">
 		<Message Text="I found the %(Project.Name) in %(Project.Identity)"/>
-		<JsonPeek JsonInputPath="%(Project.RootDir)%(Directory)info.json" JPath="version" Condition="Exists('%(Project.RootDir)%(Directory)info.json')" ContinueOnError="True">
-			<Output TaskParameter="Result" ItemName="Version" ContinueOnError="True"/>
+		<JsonPeek JsonInputPath="%(Project.RootDir)%(Directory)info.json" JPath="Version" Condition="Exists('%(Project.RootDir)%(Directory)info.json')" ContinueOnError="True">
+			<Output TaskParameter="Result" ItemName="Version"/>
 		</JsonPeek>
 		<Message Text="Version is %(Version.Value)" />
 		<OnError ExecuteTargets="Goodbye"/>
 	</Target>
-	<Target Name="Hello" BeforeTargets="Projects">
+	<Target Name="Hello">
 		<Message Text="Hello $(Me) configuration is $(Configuration) you are logged in as $(USERNAME)"/>
 	</Target>
 	<Target Name="Goodbye" DependsOnTargets="Hello">
